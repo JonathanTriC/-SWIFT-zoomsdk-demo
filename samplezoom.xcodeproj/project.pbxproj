@@ -8,22 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		BB95FB2F2829FF6F007F70FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95FB2E2829FF6F007F70FF /* AppDelegate.swift */; };
-		BB95FB312829FF6F007F70FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95FB302829FF6F007F70FF /* SceneDelegate.swift */; };
 		BB95FB332829FF6F007F70FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95FB322829FF6F007F70FF /* ViewController.swift */; };
 		BB95FB362829FF6F007F70FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB95FB342829FF6F007F70FF /* Main.storyboard */; };
 		BB95FB382829FF71007F70FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB95FB372829FF71007F70FF /* Assets.xcassets */; };
 		BB95FB3B2829FF71007F70FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB95FB392829FF71007F70FF /* LaunchScreen.storyboard */; };
+		BB95FB452829FFA9007F70FF /* MobileRTCResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB95FB432829FFA9007F70FF /* MobileRTCResources.bundle */; };
+		BB95FB462829FFCF007F70FF /* MobileRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB95FB422829FFA9007F70FF /* MobileRTC.xcframework */; };
+		BB95FB472829FFCF007F70FF /* MobileRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB95FB422829FFA9007F70FF /* MobileRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBA78429282CC90000865605 /* CustomMeetingUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA78428282CC90000865605 /* CustomMeetingUIViewController.swift */; };
+		BBA7842C282CDF1F00865605 /* CustomView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA7842B282CDF1F00865605 /* CustomView.storyboard */; };
+		BBA78434282E4ECB00865605 /* MeetingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA78433282E4ECB00865605 /* MeetingDelegate.swift */; };
+		BBA78436282E676C00865605 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA78435282E676C00865605 /* File.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB95FB482829FFCF007F70FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BB95FB472829FFCF007F70FF /* MobileRTC.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BB95FB2B2829FF6F007F70FF /* samplezoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = samplezoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB95FB2E2829FF6F007F70FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB95FB302829FF6F007F70FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB95FB322829FF6F007F70FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB95FB352829FF6F007F70FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB95FB372829FF71007F70FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB95FB3A2829FF71007F70FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB95FB3C2829FF71007F70FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB95FB422829FFA9007F70FF /* MobileRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MobileRTC.xcframework; sourceTree = "<group>"; };
+		BB95FB432829FFA9007F70FF /* MobileRTCResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobileRTCResources.bundle; sourceTree = "<group>"; };
+		BBA78428282CC90000865605 /* CustomMeetingUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMeetingUIViewController.swift; sourceTree = "<group>"; };
+		BBA7842B282CDF1F00865605 /* CustomView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomView.storyboard; sourceTree = "<group>"; };
+		BBA78433282E4ECB00865605 /* MeetingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingDelegate.swift; sourceTree = "<group>"; };
+		BBA78435282E676C00865605 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB95FB462829FFCF007F70FF /* MobileRTC.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +83,17 @@
 			isa = PBXGroup;
 			children = (
 				BB95FB2E2829FF6F007F70FF /* AppDelegate.swift */,
-				BB95FB302829FF6F007F70FF /* SceneDelegate.swift */,
 				BB95FB322829FF6F007F70FF /* ViewController.swift */,
 				BB95FB342829FF6F007F70FF /* Main.storyboard */,
 				BB95FB372829FF71007F70FF /* Assets.xcassets */,
 				BB95FB392829FF71007F70FF /* LaunchScreen.storyboard */,
 				BB95FB3C2829FF71007F70FF /* Info.plist */,
+				BB95FB422829FFA9007F70FF /* MobileRTC.xcframework */,
+				BB95FB432829FFA9007F70FF /* MobileRTCResources.bundle */,
+				BBA78428282CC90000865605 /* CustomMeetingUIViewController.swift */,
+				BBA7842B282CDF1F00865605 /* CustomView.storyboard */,
+				BBA78433282E4ECB00865605 /* MeetingDelegate.swift */,
+				BBA78435282E676C00865605 /* File.swift */,
 			);
 			path = samplezoom;
 			sourceTree = "<group>";
@@ -77,6 +108,7 @@
 				BB95FB272829FF6F007F70FF /* Sources */,
 				BB95FB282829FF6F007F70FF /* Frameworks */,
 				BB95FB292829FF6F007F70FF /* Resources */,
+				BB95FB482829FFCF007F70FF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +157,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA7842C282CDF1F00865605 /* CustomView.storyboard in Resources */,
 				BB95FB3B2829FF71007F70FF /* LaunchScreen.storyboard in Resources */,
+				BB95FB452829FFA9007F70FF /* MobileRTCResources.bundle in Resources */,
 				BB95FB382829FF71007F70FF /* Assets.xcassets in Resources */,
 				BB95FB362829FF6F007F70FF /* Main.storyboard in Resources */,
 			);
@@ -138,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA78436282E676C00865605 /* File.swift in Sources */,
+				BBA78434282E4ECB00865605 /* MeetingDelegate.swift in Sources */,
 				BB95FB332829FF6F007F70FF /* ViewController.swift in Sources */,
+				BBA78429282CC90000865605 /* CustomMeetingUIViewController.swift in Sources */,
 				BB95FB2F2829FF6F007F70FF /* AppDelegate.swift in Sources */,
-				BB95FB312829FF6F007F70FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +236,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -216,10 +253,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -260,6 +298,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -270,9 +309,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -285,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM7XDAK6P3;
@@ -302,6 +343,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathantri.samplezoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM7XDAK6P3;
@@ -330,6 +373,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathantri.samplezoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

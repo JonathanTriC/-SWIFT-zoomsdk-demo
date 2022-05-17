@@ -1,25 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Custom MeetingUI View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomMeetingUIViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CustomMeetingUIViewController" customModule="samplezoom" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="182" id="CPh-At-bLG">
+                                <rect key="frame" x="55" y="102" width="305" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaB-6o-ubu">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="31"/>
+                                        <color key="backgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Leave Meeting" cornerStyle="dynamic">
+                                            <backgroundConfiguration key="background" cornerRadius="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cameraButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="tDo-fl-6Hn"/>
+                                            <action selector="leaveMeetingButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="g0R-ph-WAT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="qP5-cj-5J9"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-1t-9MK">
+                                <rect key="frame" x="251" y="720" width="109" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="gIV-D6-U0W"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Video" buttonSize="medium">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="HMz-jD-xi5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb8-67-b0Y">
+                                <rect key="frame" x="55" y="720" width="109" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="3Pz-Ne-zaU"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Audio" buttonSize="medium">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="GaP-5K-K8f"/>
+                                    <action selector="muteButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fjp-G1-nHw"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="448-2I-y7T">
+                                <rect key="frame" x="55" y="342" width="305" height="212"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="448-2I-y7T" firstAttribute="top" secondItem="CPh-At-bLG" secondAttribute="bottom" constant="209" id="57S-0y-ort"/>
+                            <constraint firstItem="sb8-67-b0Y" firstAttribute="leading" secondItem="448-2I-y7T" secondAttribute="leading" id="ABS-UD-fhl"/>
+                            <constraint firstItem="448-2I-y7T" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="MHX-WB-KMs"/>
+                            <constraint firstItem="448-2I-y7T" firstAttribute="leading" secondItem="CPh-At-bLG" secondAttribute="leading" id="apH-F4-8VJ"/>
+                            <constraint firstItem="448-2I-y7T" firstAttribute="trailing" secondItem="8N3-1t-9MK" secondAttribute="trailing" id="fuv-Bf-Bhc"/>
+                            <constraint firstItem="sb8-67-b0Y" firstAttribute="baseline" secondItem="8N3-1t-9MK" secondAttribute="baseline" id="lRZ-qO-GKO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8N3-1t-9MK" secondAttribute="bottom" constant="111" id="rNF-7F-vla"/>
+                            <constraint firstItem="448-2I-y7T" firstAttribute="trailing" secondItem="CPh-At-bLG" secondAttribute="trailing" id="wI0-id-NiS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="zoomView" destination="448-2I-y7T" id="N8R-PT-66n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mrM-fD-uOY" userLabel="Exit" sceneMemberID="exit"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="182" id="ZtZ-wh-Tzo">
+                    <rect key="frame" x="0.0" y="0.0" width="305" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj5-5w-T8d">
+                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="31"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Audio" cornerStyle="dynamic">
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="muteButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="deQ-CL-Ing"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-xW-6Wa">
+                            <rect key="frame" x="243.5" y="0.0" width="61.5" height="31"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Video">
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="SOL-tQ-s5U"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="t2M-5b-dhP"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="182" id="X1m-96-Sbq">
+                    <rect key="frame" x="0.0" y="0.0" width="305" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvW-4r-Uju">
+                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="31"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Audio" cornerStyle="dynamic">
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="muteButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="OxS-zS-oib"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-on-TBj">
+                            <rect key="frame" x="243.5" y="0.0" width="61.5" height="31"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Video">
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="mrM-fD-uOY" eventType="touchUpInside" id="0zu-vI-Joz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="Rhv-AO-N2Y"/>
+                </stackView>
             </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="52.901785714285715"/>
         </scene>
     </scenes>
     <resources>
